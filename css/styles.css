@@ -520,7 +520,12 @@ body {
 .footer-container {
   display: flex;
   align-items: baseline;
-  gap: 120px;
+}
+.footer-container-logo {
+  margin-right: 120px;
+}
+.footer-container-socials {
+  margin-right: 80px;
 }
 
 .footer-logo-link {
@@ -657,8 +662,6 @@ body {
   cursor: pointer;
   border: none;
 
-} 
-.subscribe-form-btn-text {
   font-family: var(--primary-font);
   font-weight: 500;
   font-size: 16px;
@@ -666,7 +669,17 @@ body {
   /* identical to box height, or 150% */
   letter-spacing: 0.04em;
   color: var(--white);
+
+  transition: background-color var(--anim);
 }
+
+.subscribe-form-btn:hover,
+.subscribe-form-btn:focus {  
+  background: var(--ocean);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
 .subscribe-form-icon {
 }
 
@@ -927,7 +940,7 @@ body {
   outline: 2px solid transparent;
   outline-offset: -2px;
 
-  transition: var(--anim);
+  transition: outline-color var(--anim);
 }
 .modal-form-input:focus {
   outline-color: var(--iris);
@@ -937,8 +950,9 @@ body {
   top: 50%;
   left: 16px;
 
+  fill: var(--navy-blue);
   transform: translateY(-50%);
-  transition: var(--anim);
+  transition: fill var(--anim);
 }
 .modal-form-input:focus + .modal-form-icon {
   fill: var(--iris);
@@ -956,7 +970,7 @@ body {
   outline: 2px solid transparent;
   outline-offset: -2px;
 
-  transition: var(--anim);
+  transition: outline-color var(--anim);
 
   resize: none;
 }
@@ -976,7 +990,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  /* gap: 8px; */
   margin-bottom: 20px;
 }
 .modal-form-agreement-box {
@@ -992,7 +1006,7 @@ body {
   background-position: center;
   background-size: 0; */
 
-  transition: var(--anim);
+  transition: background-color var(--anim), border-color var(--anim);
   cursor: pointer;
 }
 .modal-form-agreement-box:checked {
@@ -1000,6 +1014,15 @@ body {
   border-color: var(--ocean);
   background-size: 10px;
 }
+
+.modal-form-agreement-icon {
+  margin-right: 8px;
+}
+
+/* .modal-form-agreement-icon:focus + .modal-form-agreement-icon-unchecked {
+  fill: #434455;
+} */
+
 
 .modal-form-agreement-icon-unchecked {
   opacity: 1;
@@ -1053,5 +1076,12 @@ body {
   padding: 16px 32px;
   margin: 0 auto;
 
-  transition: var(--anim);
+  transition: background-color var(--anim);
+}
+
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  background: var(--ocean);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
