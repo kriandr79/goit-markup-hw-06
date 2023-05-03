@@ -652,10 +652,12 @@ body {
 }
 
 .subscribe-form-btn {
+  width: 165px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
   padding: 8px 24px;
   background: var(--iris);
   border-radius: 4px;
@@ -989,7 +991,6 @@ body {
 .modal-form-argeement {
   display: flex;
   align-items: center;
-  justify-content: center;
   /* gap: 8px; */
   margin-bottom: 20px;
 }
@@ -1017,11 +1018,12 @@ body {
 
 .modal-form-agreement-icon {
   margin-right: 8px;
+  stroke: rgba(46, 47, 66, 0.4);
 }
 
-/* .modal-form-agreement-icon:focus + .modal-form-agreement-icon-unchecked {
-  fill: #434455;
-} */
+.modal-form-agreement-box:focus + .modal-form-agreement-icon {
+  stroke: var(--iris);
+}
 
 
 .modal-form-agreement-icon-unchecked {
